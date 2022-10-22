@@ -24,9 +24,10 @@
     const gameLoop = () => {
         let ended = false;
         let stage = 1;
-        let numberAmount = () => floor(stage / 5) + 3;
-        let numberLength = () => floor(stage / 10) + 1;
-        let time = () => floor(500 / stage);
+        const score = () => stage - 1;
+        const numberAmount = () => floor(stage / 5) + 3;
+        const numberLength = () => floor(stage / 10) + 1;
+        const time = () => floor(500 / stage);
         const wait = n => new Promise(r => setTimeout(r, n));
         let ints = null;
         let pressing = null;
@@ -68,12 +69,12 @@
             const ending = async () => {
                 let high = (localStorage.getItem("highScore") || 0) * 1;
                 let nh = false;
-                if (high < stage) {
+                if (high < score()) {
                     nh = true;
-                    high = stage;
+                    high = score();
                     localStorage.setItem("highScore", high + "");
                 }
-                numbers.innerHTML = (nh ? "NEW HIGH SCORE!<br>" : "") + "You pressed to the wrong key!<br>The numbers were: " + ints.join(" ") + "<br>Score: " + stage + "<br>High score: " + stage + "<br>Click to restart";
+                numbers.innerHTML = (nh ? "NEW HIGH SCORE!<br>" : "") + "You pressed to the wrong key!<br>The numbers were: " + ints.join(" ") + "<br>Score: " + score() + "<br>High score: " + high + "<br>Click to restart";
                 started = false;
             };
             await starting();
