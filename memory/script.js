@@ -66,7 +66,14 @@
                 setTimeout(waiting);
             };
             const ending = async () => {
-                numbers.innerHTML = "You pressed to the wrong key!<br>The numbers were: " + ints.join(" ") + "<br>Your score: " + stage + "<br>Click to restart";
+                let high = (localStorage.getItem("highScore") || 0) * 1;
+                let nh = false;
+                if (high < stage) {
+                    nh = true;
+                    high = stage;
+                    localStorage.setItem("highScore", high + "");
+                }
+                numbers.innerHTML = (nh ? "NEW HIGH SCORE!<br>" : "") + "You pressed to the wrong key!<br>The numbers were: " + ints.join(" ") + "<br>Score: " + stage + "<br>High score: " + stage + "<br>Click to restart";
                 started = false;
             };
             await starting();
