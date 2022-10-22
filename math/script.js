@@ -3,7 +3,7 @@
     const rand = (min, max) => floor(random() * (max - min + 1)) + min;
     const shuffle = array => {
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            const j = floor(random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
@@ -38,7 +38,7 @@
             }
             result = eval(resultArray.join(""));
         };
-        while (result < 0 || result > 99 || isNaN(result) || result !== Math.floor(result)) ch();
+        while (result < 0 || result > 99 || isNaN(result) || result !== floor(result)) ch();
         question = {
             result, resultArray,
             nodes: shuffle([...numbers]).map(i => ({type: "number", value: i, div: null}))
