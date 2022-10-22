@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find the equation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="btn" id="generate">Generate</div>
+<div class="btn" id="show-answer">Show answer</div>
+<div class="btn" id="how-to-play">How to play?</div>
+<div class="container">
+    <div class="target-name">Target:</div>
+    <div class="target">12</div>
+    <div class="question">
+        <div class="draggable" data-removable="0" data-type="number" draggable="true">10</div>
+        <div class="draggable" data-type="operator">+</div>
+        <div class="draggable" data-removable="0" data-type="number">10</div>
+        <div class="not-draggable">≠</div>
+        <div class="not-draggable">20</div>
+    </div>
+    <div class="operators">
+        <div class="draggable" data-type="operator">(</div>
+        <div class="draggable" data-type="operator">+</div>
+        <div class="draggable" data-type="operator">-</div>
+        <div class="draggable" data-type="operator">×</div>
+        <div class="draggable" data-type="operator">÷</div>
+        <div class="draggable" data-type="operator">)</div>
+    </div>
+</div>
+<div class="popup">
+    <div class="popup-box"></div>
+</div>
+<div class="full" style="display: none"><br>&nbsp;</div>
+</body>
+<script src="script.js"></script>
+</html>

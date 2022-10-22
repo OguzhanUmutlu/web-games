@@ -1,0 +1,136 @@
+* {
+    font-family: Calibri, serif;
+    user-select: none;
+    color: white;
+}
+
+body {
+    background-color: #36393F;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #65686e;
+    transition: background-color .2s, scale .2s;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: #84878c;
+    scale: 1.1;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    translate: -50%;
+}
+
+.question, .operators {
+    display: flex;
+    justify-content: center;
+}
+
+.question > div, .operators > div, .draggable {
+    background-color: #878e9b;
+    border-radius: 3px;
+    min-width: 30px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.operators {
+    margin-top: 50px;
+}
+
+.draggable {
+    cursor: grab;
+}
+
+.not-draggable {
+    cursor: not-allowed;
+}
+
+.draggable:hover {
+    scale: 1.1;
+}
+
+.dragging {
+    position: absolute;
+    cursor: grabbing;
+}
+
+.target {
+    text-align: center;
+    font-size: 200px;
+}
+
+.target-name {
+    text-align: center;
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color .2s;
+    pointer-events: none;
+}
+
+.popup-on {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-box {
+    position: absolute;
+    left: 50%;
+    top: -1000px;
+    translate: -50% -50%;
+    text-align: center;
+    border: 5px solid #96979a;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: #333338;
+    transition: top .5s;
+}
+
+.popup-box-on {
+    top: 50%;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons > div {
+    border-radius: 5px;
+    background-color: #bfc3cb;
+    padding: 5px;
+    margin-right: 10px;
+    color: #656a72;
+    cursor: pointer;
+    transition: scale .2s, background-color .2s, color .2s;
+}
+
+.buttons > div:hover {
+    scale: 1.1;
+    color: #bfc3cb;
+    background-color: #656a72;
+}
+
+.full {
+    position: absolute;
+    bottom: -100px;
+}
