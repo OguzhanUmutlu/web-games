@@ -73,8 +73,3 @@ body {
     scale: 1.1;
     background-color: #82868d;
 }
-
-.empty-cell {
-    background-color: transparent !important;
-    pointer-events: none;
-}

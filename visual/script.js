@@ -26,8 +26,7 @@
         let stage = 1;
         const score = () => stage - 1;
         const numberAmount = () => floor(stage / 5) + 3;
-        const numberLength = () => floor(stage / 10) + 1;
-        const time = () => floor(500 / stage);
+        const time = () => floor(-1 * stage ** 2 / 5 + 500) < 0 ? 0 : floor(-1 * stage ** 2 / 5 + 500);
         const wait = n => new Promise(r => setTimeout(r, n));
         let ints = null;
         let pressing = null;
@@ -42,7 +41,7 @@
                 setTimeout(showing);
             };
             const showing = async () => {
-                ints = [..." ".repeat(numberAmount())].map(_ => rand(1, 10 ** (numberLength()) - 1));
+                ints = [..." ".repeat(numberAmount())].map(_ => rand(1, 9));
                 numbers.innerHTML = ints.join(" ");
                 await wait(time());
                 numbers.innerHTML = "Type the numbers you have just seen";

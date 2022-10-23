@@ -26,6 +26,11 @@
             const starting = async () => {
                 boxesDiv.innerHTML = [..." ".repeat(tableSize())].map((_, j) => `<div>${[..." ".repeat(tableSize())].map((_, jj) => `<div data-box-id="${j * tableSize() + jj}"></div>`).join("")}</div>`).join("");
                 boxes = Array.from(boxesDiv.querySelectorAll("div > div")).filter(i => i.getAttribute("data-box-id"));
+                boxes.forEach(i => {
+                    i.style.width = Math.min(innerWidth, innerHeight) * .6 / tableSize() + "px";
+                    // noinspection JSSuspiciousNameCombination
+                    i.style.height = i.style.width;
+                });
                 for (let t = 3; t > 0; t--) {
                     textDiv.innerHTML = t + "";
                     await wait(1000);
