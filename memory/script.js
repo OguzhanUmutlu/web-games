@@ -69,12 +69,12 @@
             };
             const ending = async () => {
                 boxesDiv.innerHTML = "";
-                let high = (localStorage.getItem("highScore") || 0) * 1;
+                let high = (localStorage.getItem("memory-highScore") || 0) * 1;
                 let nh = false;
                 if (high < score()) {
                     nh = true;
                     high = score();
-                    localStorage.setItem("highScore", high + "");
+                    localStorage.setItem("memory-highScore", high + "");
                 }
                 textDiv.innerHTML = (nh ? "NEW HIGH SCORE!<br>" : "") + "You pressed to the wrong box!<br>The pattern was: " + lights.map(i => `${i.getAttribute("data-box-id") * 1 + 1}`).join(", ") + "<br>Score: " + score() + "<br>High score: " + high + "<br>Click to restart";
                 started = false;

@@ -66,12 +66,12 @@
                 setTimeout(waiting);
             };
             const ending = async () => {
-                let high = (localStorage.getItem("highScore") || 0) * 1;
+                let high = (localStorage.getItem("visual-highScore") || 0) * 1;
                 let nh = false;
                 if (high < score()) {
                     nh = true;
                     high = score();
-                    localStorage.setItem("highScore", high + "");
+                    localStorage.setItem("visual-highScore", high + "");
                 }
                 numbers.innerHTML = (nh ? "NEW HIGH SCORE!<br>" : "") + "You pressed to the wrong key!<br>The numbers were: " + ints.join(" ") + "<br>Score: " + score() + "<br>High score: " + high + "<br>Click to restart";
                 started = false;
