@@ -24,7 +24,7 @@
         let boxes = null;
         (async () => {
             const starting = async () => {
-                boxesDiv.innerHTML = [..." ".repeat(tableSize())].map((_, j) => `<div>${[..." ".repeat(tableSize())].map((_, jj) => `<div data-box-id="${j * tableSize() + jj}"></div>`).join("")}</div>`).join("");
+                boxesDiv.innerHTML = [..." ".repeat(tableSize())].map((_, j) => `<div>${[..." ".repeat(tableSize())].map((_, jj) => `<div data-box-id="${j * tableSize() + jj}"><div>${j * 3 + jj + 1}</div></div>`).join("")}</div>`).join("");
                 boxes = Array.from(boxesDiv.querySelectorAll("div > div")).filter(i => i.getAttribute("data-box-id"));
                 boxes.forEach(i => {
                     i.style.width = Math.min(innerWidth, innerHeight) * .6 / tableSize() + "px";
@@ -46,8 +46,10 @@
                 for (let i = 0; i < lights.length; i++) {
                     const light = lights[i];
                     light.style.backgroundColor = "white";
+                    light.firstChild.style.color = "#47494f";
                     await wait(speed());
                     light.style.backgroundColor = "";
+                    light.firstChild.style.color = "";
                     await wait(speed());
                 }
                 textDiv.innerHTML = "Click the boxes you have just seen";

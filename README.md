@@ -5,16 +5,24 @@ Fun web games I made
 
 [Equation Finding Game](https://oguzhanumutlu.github.io/web-games/math/index.html)
 
-![](./screenshots/equation-finding.png)
+![](screenshots/equation-finding.png)
 
 ****
 
 [Number Memorization Game](https://oguzhanumutlu.github.io/web-games/visual/index.html)
 
-![](./screenshots/visual.png)
+![](screenshots/visual.png)
 
 ****
 
 [Visual Memorization Game](https://oguzhanumutlu.github.io/web-games/memory/index.html)
 
-![](./screenshots/memory.png)
+![](screenshots/memory.png)
+
+# todo
+
+- sudoku
+- text memorization
+- fast text reading
+- fast typing
+- monke number memorization

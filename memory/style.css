@@ -35,11 +35,19 @@ body {
     margin: 5px;
     border-radius: 3px;
     cursor: pointer;
-    transition: scale .1s, background-color .1s, filter .1s;
+    transition: scale .1s, background-color .1s, filter .1s
 }
 
 .boxes > div > div:hover {
     scale: 1.1;
     background-color: #82868d;
     filter: brightness(.8);
+}
+
+.boxes > div > div > div {
+    color: white;
+    transition: color .1s;
+    margin-top: calc(50% - 5px);
+    translate: 0 -50%;
+    font-size: 150px;
 }
