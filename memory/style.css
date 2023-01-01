@@ -50,4 +50,5 @@ body {
     margin-top: calc(50% - 5px);
     translate: 0 -50%;
     font-size: 150px;
+    pointer-events: none;
 }

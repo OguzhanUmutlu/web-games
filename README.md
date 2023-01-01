@@ -19,10 +19,15 @@ Fun web games I made
 
 ![](screenshots/memory.png)
 
+****
+
+[Text Memorization Game](https://oguzhanumutlu.github.io/web-games/textMemorization/index.html)
+
+![](screenshots/textMemorization.png)
+
 # todo
 
 - sudoku
-- text memorization
 - fast text reading
 - fast typing
 - monke number memorization

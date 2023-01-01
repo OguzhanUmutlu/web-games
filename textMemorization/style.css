@@ -1,0 +1,20 @@
+* {
+    font-family: Calibri, serif;
+    font-size: 19px;
+    color: #fff;
+    user-select: none;
+}
+
+body {
+    background-color: #36393F;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    pointer-events: none;
+    text-align: center;
+}

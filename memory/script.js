@@ -62,6 +62,7 @@
                 const id = ev.target.getAttribute("data-box-id");
                 if (id !== lights[pressing.length].getAttribute("data-box-id")) return ending();
                 ev.target.style.backgroundColor = "white";
+                ev.target.firstChild.style.color = "#47494f";
                 pressing.push(id);
                 if (lights.length === pressing.length) {
                     stage++;
