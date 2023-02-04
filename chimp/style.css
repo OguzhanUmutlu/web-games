@@ -1,0 +1,35 @@
+* {
+    font-family: Calibri, serif;
+    font-size: 19px;
+    color: #fff;
+    user-select: none;
+}
+
+body {
+    background-color: #36393F;
+    overflow: hidden;
+}
+
+.numbers {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    display: flex;
+}
+
+.numbers > div {
+    font-family: monospace, serif;
+    width: 44px;
+    height: 44px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    text-align: center;
+}

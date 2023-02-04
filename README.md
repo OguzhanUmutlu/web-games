@@ -3,6 +3,12 @@ Fun web games I made
 
 ****
 
+[Chimpanzee Memorization Game](https://oguzhanumutlu.github.io/web-games/chimp/index.html)
+
+![](screenshots/chimp.png)
+
+****
+
 [Equation Finding Game](https://oguzhanumutlu.github.io/web-games/math/index.html)
 
 ![](screenshots/equation-finding.png)
